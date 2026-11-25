@@ -1,0 +1,176 @@
+/* Base Typography & Theme Palette */
+body {
+  font-family: 'Tajawal', 'Cairo', sans-serif;
+  background-color: #06130d;
+  color: #f1f5f9;
+  overflow-x: hidden;
+}
+
+/* Deep Forest Green & Gold Hero Backdrop */
+.military-bg {
+  background-color: #06130d;
+  background-image:
+    radial-gradient(circle at 50% 18%, rgba(223, 177, 54, 0.14) 0%, rgba(20, 66, 45, 0.28) 38%, rgba(6, 17, 12, 0.96) 74%),
+    linear-gradient(180deg, #0b2419 0%, #071710 52%, #050f0a 100%),
+    linear-gradient(to right, rgba(223, 177, 54, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(223, 177, 54, 0.03) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 34px 34px, 34px 34px;
+}
+
+.hero-emblem-frame {
+  background: radial-gradient(circle at 50% 35%, rgba(223, 177, 54, 0.26), rgba(8, 28, 19, 0.94) 72%);
+  border: 2.5px solid #e5b83b;
+  box-shadow: 0 0 42px rgba(223, 177, 54, 0.42), inset 0 0 18px rgba(223, 177, 54, 0.2);
+}
+
+.hero-city-pill {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.hero-main-title-gradient {
+  background: linear-gradient(90deg, #ffffff 0%, #f5e3a1 45%, #e5b83b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Primary & Secondary Action Buttons */
+.gold-action-btn {
+  background: linear-gradient(180deg, #dfb136 0%, #c8951e 100%);
+  color: #0b140f;
+  box-shadow: 0 0 28px rgba(223, 177, 54, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  transition: all 0.22s ease;
+}
+
+.gold-action-btn:hover {
+  background: linear-gradient(180deg, #ecc046 0%, #d4a127 100%);
+  box-shadow: 0 0 36px rgba(223, 177, 54, 0.6);
+  transform: translateY(-1px);
+}
+
+.dark-green-btn {
+  background: linear-gradient(180deg, #0d261b 0%, #081811 100%);
+  color: #e2e8f0;
+  border: 1px solid rgba(223, 177, 54, 0.28);
+  box-shadow: 0 8px 20px -10px rgba(0, 0, 0, 0.7);
+  transition: all 0.22s ease;
+}
+
+.dark-green-btn:hover {
+  border-color: rgba(229, 184, 59, 0.65);
+  color: #ffffff;
+  background: linear-gradient(180deg, #123324 0%, #0a1f16 100%);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #060d09;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9c7216;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #dfb136;
+}
+
+/* Glass Cards & Form Inputs */
+.surface-card {
+  background: linear-gradient(145deg, rgba(14, 34, 25, 0.92), rgba(7, 18, 13, 0.96));
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(223, 177, 54, 0.22);
+  box-shadow: 0 12px 30px -12px rgba(0, 0, 0, 0.65);
+  transition: all 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.surface-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(229, 184, 59, 0.55);
+  box-shadow: 0 18px 36px -10px rgba(223, 177, 54, 0.2);
+}
+
+.form-field {
+  background-color: #08150f;
+  border: 1px solid rgba(223, 177, 54, 0.24);
+  color: #f8fafc;
+  transition: all 0.2s ease;
+}
+
+.form-field:focus {
+  outline: none;
+  border-color: #dfb136;
+  box-shadow: 0 0 0 3px rgba(223, 177, 54, 0.16);
+}
+
+.form-field::placeholder {
+  color: #64748b;
+}
+
+/* Navigation Dropdown Hover */
+.nav-dropdown:hover .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Emblem Pulse Animation */
+@keyframes subtlePulse {
+  0%, 100% { transform: scale(1); opacity: 0.35; }
+  50% { transform: scale(1.06); opacity: 0.6; }
+}
+
+.emblem-ring {
+  animation: subtlePulse 4s ease-in-out infinite;
+}
+
+.guard-emblem-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Wave Callsign Generator Card */
+.callsign-panel {
+  background: linear-gradient(165deg, rgba(16, 36, 28, 0.95) 0%, rgba(9, 20, 16, 0.98) 100%);
+  border: 1px solid rgba(234, 179, 8, 0.32);
+  box-shadow: 0 22px 45px -15px rgba(0, 0, 0, 0.75), inset 0 1px 0 rgba(250, 204, 21, 0.25);
+}
+
+.callsign-input-box {
+  background-color: #09120e;
+  border: 1px solid rgba(234, 179, 8, 0.24);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.callsign-input-box:focus-within {
+  border-color: #eab308;
+  box-shadow: 0 0 0 3px rgba(234, 179, 8, 0.16);
+}
+
+.callsign-generate-btn {
+  background: linear-gradient(180deg, #dfb136 0%, #c8951e 100%);
+  color: #0b120e;
+  box-shadow: 0 0 24px rgba(223, 177, 54, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  transition: all 0.22s ease;
+}
+
+.callsign-generate-btn:hover {
+  background: linear-gradient(180deg, #ecc046 0%, #d4a127 100%);
+  box-shadow: 0 0 32px rgba(223, 177, 54, 0.55);
+  transform: translateY(-1px);
+}
+
+.callsign-result-card {
+  background: linear-gradient(180deg, rgba(66, 56, 17, 0.42) 0%, rgba(44, 38, 12, 0.32) 100%);
+  border: 1px solid rgba(234, 179, 8, 0.45);
+  box-shadow: 0 10px 25px -10px rgba(234, 179, 8, 0.22);
+}
